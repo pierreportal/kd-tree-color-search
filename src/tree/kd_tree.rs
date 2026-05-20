@@ -18,7 +18,7 @@ impl KdTree {
                 tree
             }
             Err(_) => {
-                let colors = parse_colornames_file("color_names.txt").unwrap();
+                let colors = parse_colornames_file("magpie/color_names.txt").unwrap();
                 let tree = self.build_kdtree(colors, 0);
                 let file = File::create(binfile_name).unwrap();
                 let writer = BufWriter::new(file);
